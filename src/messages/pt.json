@@ -199,7 +199,9 @@
     "signup": {
       "kicker": "Atenda com inteligência",
       "title": "Crie seu restaurante",
-      "businessNameLabel": "Nome do negócio",
+      "businessNameLabel": "Nome do restaurante",
+      "businessNamePlaceholder": "ex. Lagoon",
+      "businessNameHint": "O que os clientes veem ao escanear o QR.",
       "emailLabel": "E-mail",
       "passwordLabel": "Senha",
       "submit": "Criar conta",
@@ -222,6 +224,7 @@
       "emailInvalid": "Digite um e-mail válido.",
       "passwordTooShort": "A senha deve ter pelo menos 8 caracteres.",
       "restaurantTooShort": "O nome do restaurante é muito curto.",
+      "restaurant_looks_like_email": "Use o nome do seu restaurante, não um endereço de e-mail.",
       "invalidCredentials": "E-mail/telefone ou senha incorretos.",
       "phone_already_registered": "Esse número já está cadastrado.",
       "email_already_registered": "Esse e-mail já está cadastrado.",

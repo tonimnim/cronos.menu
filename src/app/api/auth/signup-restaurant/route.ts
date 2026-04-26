@@ -21,7 +21,17 @@ export const dynamic = "force-dynamic";
  */
 const Body = z.object({
   userId: z.string().uuid(),
-  businessName: z.string().trim().min(2).max(80),
+  // The most common signup-trap: users paste their email into the
+  // restaurant name field. Reject with a specific error code so the client
+  // can show a helpful message — and, just as importantly, so a malicious
+  // or buggy client can't bypass the check (the slug derived from this
+  // value becomes the public QR URL and propagates to printed stickers).
+  businessName: z
+    .string()
+    .trim()
+    .min(2)
+    .max(80)
+    .refine((v) => !v.includes("@"), { message: "looks_like_email" }),
   displayName: z.string().trim().min(1).max(60).optional(),
 });
 
@@ -40,7 +50,13 @@ function slugify(name: string): string {
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: "invalid_body" }, { status: 400 });
+    const looksLikeEmail = parsed.error.issues.some(
+      (i) => i.path[0] === "businessName" && i.message === "looks_like_email",
+    );
+    return NextResponse.json(
+      { error: looksLikeEmail ? "restaurant_looks_like_email" : "invalid_body" },
+      { status: 400 },
+    );
   }
   const { userId, businessName, displayName } = parsed.data;
 

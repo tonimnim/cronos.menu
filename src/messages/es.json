@@ -199,7 +199,9 @@
     "signup": {
       "kicker": "Sirve con inteligencia",
       "title": "Crea tu restaurante",
-      "businessNameLabel": "Nombre del negocio",
+      "businessNameLabel": "Nombre del restaurante",
+      "businessNamePlaceholder": "p. ej., Lagoon",
+      "businessNameHint": "Lo que ven los clientes al escanear el QR.",
       "emailLabel": "Correo electrónico",
       "passwordLabel": "Contraseña",
       "submit": "Crear cuenta",
@@ -222,6 +224,7 @@
       "emailInvalid": "Introduce un correo válido.",
       "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
       "restaurantTooShort": "El nombre del restaurante es demasiado corto.",
+      "restaurant_looks_like_email": "Usa el nombre de tu restaurante, no un correo electrónico.",
       "invalidCredentials": "Correo/teléfono o contraseña incorrectos.",
       "phone_already_registered": "Ese número ya está registrado.",
       "email_already_registered": "Ese correo ya está registrado.",

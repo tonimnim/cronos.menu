@@ -199,7 +199,9 @@
     "signup": {
       "kicker": "更智能地服务",
       "title": "创建您的餐厅",
-      "businessNameLabel": "商家名称",
+      "businessNameLabel": "餐厅名称",
+      "businessNamePlaceholder": "例如：Lagoon",
+      "businessNameHint": "顾客扫码时看到的名称。",
       "emailLabel": "邮箱",
       "passwordLabel": "密码",
       "submit": "创建账户",
@@ -222,6 +224,7 @@
       "emailInvalid": "请输入有效的邮箱。",
       "passwordTooShort": "密码至少 8 个字符。",
       "restaurantTooShort": "餐厅名称太短。",
+      "restaurant_looks_like_email": "请填写餐厅名称，不要填写邮箱地址。",
       "invalidCredentials": "邮箱/手机号或密码错误。",
       "phone_already_registered": "该号码已注册。",
       "email_already_registered": "该邮箱已注册。",

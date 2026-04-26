@@ -27,8 +27,17 @@ export function SignupForm() {
     event.preventDefault();
     setError(null);
 
-    if (businessName.trim().length < 2) {
+    const businessNameTrimmed = businessName.trim();
+    if (businessNameTrimmed.length < 2) {
       setError(te("restaurantTooShort"));
+      return;
+    }
+    // Most common signup-trap: users paste their email into the restaurant
+    // name field. The slug derived from that becomes the public QR URL,
+    // which is permanent (printed stickers) and leaks the email via
+    // sitemap/SEO. Catch it here and surface a clear error.
+    if (businessNameTrimmed.includes("@")) {
+      setError(te("restaurant_looks_like_email"));
       return;
     }
     if (!EMAIL_RE.test(email.trim())) {
@@ -103,11 +112,16 @@ export function SignupForm() {
         <Input
           id="business"
           autoComplete="organization"
+          placeholder={t("businessNamePlaceholder")}
           value={businessName}
           onChange={(e) => setBusinessName(e.target.value)}
           required
           disabled={isPending}
+          maxLength={80}
         />
+        <p className="text-xs text-muted-foreground">
+          {t("businessNameHint")}
+        </p>
       </div>
 
       <div className="space-y-2">
