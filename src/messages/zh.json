@@ -190,10 +190,7 @@
     "login": {
       "kicker": "欢迎回来",
       "title": "登录",
-      "subtitle": "访问您餐厅的实时仪表板。",
       "identifierLabel": "邮箱或手机号",
-      "identifierPlaceholder": "you@example.com · 或 · +86 138 0000 0000",
-      "identifierHint": "所有者用邮箱登录。员工用您设定的手机号登录。",
       "passwordLabel": "密码",
       "submit": "登录",
       "noAccount": "还没有账户?",

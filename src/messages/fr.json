@@ -190,10 +190,7 @@
     "login": {
       "kicker": "Bon retour",
       "title": "Se connecter",
-      "subtitle": "Accédez au tableau de bord en direct de votre restaurant.",
       "identifierLabel": "Email ou numéro de téléphone",
-      "identifierPlaceholder": "vous@exemple.com · ou · +254 712 345 678",
-      "identifierHint": "Les propriétaires se connectent avec leur email. Le personnel utilise le numéro que vous leur avez donné.",
       "passwordLabel": "Mot de passe",
       "submit": "Se connecter",
       "noAccount": "Pas encore de compte ?",

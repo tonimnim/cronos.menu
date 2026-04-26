@@ -21,82 +21,6 @@ import { useSoundPref } from "@/hooks/use-sound-pref";
 
 type Tab = "orders" | "requests";
 
-const DEMO_ORDERS: InboxOrder[] = [
-  {
-    id: "o1",
-    restaurantId: "demo",
-    tableLabel: "05",
-    status: "pending",
-    items: [
-      { name: "Grilled Beef", qty: 1, unitPrice: "12.00" },
-      { name: "Masala Chai", qty: 2, unitPrice: "2.00" },
-    ],
-    total: "$16.00",
-    note: null,
-    createdAt: isoMinsAgo(2),
-    minutesAgo: 2,
-  },
-  {
-    id: "o2",
-    restaurantId: "demo",
-    tableLabel: "03",
-    status: "preparing",
-    items: [{ name: "Margherita Pizza", qty: 1, unitPrice: "10.00" }],
-    total: "$10.00",
-    note: null,
-    createdAt: isoMinsAgo(8),
-    minutesAgo: 8,
-  },
-  {
-    id: "o3",
-    restaurantId: "demo",
-    tableLabel: "11",
-    status: "pending",
-    items: [
-      { name: "Samosa", qty: 2, unitPrice: "3.50" },
-      { name: "Tomato Soup", qty: 1, unitPrice: "4.00" },
-    ],
-    total: "$11.00",
-    note: null,
-    createdAt: isoMinsAgo(14),
-    minutesAgo: 14,
-  },
-];
-
-const DEMO_REQUESTS: InboxRequest[] = [
-  {
-    id: "r1",
-    restaurantId: "demo",
-    tableLabel: "07",
-    note: "Bring the bill",
-    status: "new",
-    createdAt: isoMinsAgo(1),
-    minutesAgo: 1,
-  },
-  {
-    id: "r2",
-    restaurantId: "demo",
-    tableLabel: "02",
-    note: "Water please",
-    status: "new",
-    createdAt: isoMinsAgo(4),
-    minutesAgo: 4,
-  },
-  {
-    id: "r3",
-    restaurantId: "demo",
-    tableLabel: "09",
-    note: "No one has come yet",
-    status: "new",
-    createdAt: isoMinsAgo(9),
-    minutesAgo: 9,
-  },
-];
-
-function isoMinsAgo(m: number): string {
-  return new Date(Date.now() - m * 60_000).toISOString();
-}
-
 export function DashboardInbox({
   restaurantId,
 }: {
@@ -108,8 +32,8 @@ export function DashboardInbox({
 
   const { orders, requests, lastEvent, setOrders, setRequests } = useInbox({
     restaurantId,
-    initialOrders: DEMO_ORDERS,
-    initialRequests: DEMO_REQUESTS,
+    initialOrders: [],
+    initialRequests: [],
   });
 
   // Sound + haptic feedback on new live events.

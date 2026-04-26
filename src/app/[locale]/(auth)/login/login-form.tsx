@@ -76,13 +76,11 @@ export function LoginForm({
           type="text"
           inputMode="email"
           autoComplete="username"
-          placeholder={t("identifierPlaceholder")}
           value={identifier}
           onChange={(e) => setIdentifier(e.target.value)}
           required
           disabled={isPending}
         />
-        <p className="text-xs text-muted-foreground">{t("identifierHint")}</p>
       </div>
 
       <div className="space-y-2">

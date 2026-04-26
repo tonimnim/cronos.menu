@@ -35,7 +35,6 @@ export default async function LoginPage({
         <h1 className="mt-2 font-display text-5xl italic leading-[0.95] tracking-tight">
           {t("title")}
         </h1>
-        <p className="mt-3 text-sm text-muted-foreground">{t("subtitle")}</p>
       </div>
 
       <LoginForm defaultCountry={defaultCountry} />

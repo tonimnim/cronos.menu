@@ -190,10 +190,7 @@
     "login": {
       "kicker": "Welcome back",
       "title": "Sign in",
-      "subtitle": "Access your restaurant's live dashboard.",
       "identifierLabel": "Email or phone number",
-      "identifierPlaceholder": "you@example.com · or · +254 712 345 678",
-      "identifierHint": "Owners sign in with email. Staff use the phone number you set.",
       "passwordLabel": "Password",
       "submit": "Sign in",
       "noAccount": "Don't have an account?",

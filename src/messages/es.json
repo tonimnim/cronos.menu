@@ -190,10 +190,7 @@
     "login": {
       "kicker": "Bienvenido de nuevo",
       "title": "Iniciar sesión",
-      "subtitle": "Accede al panel en vivo de tu restaurante.",
       "identifierLabel": "Correo o número de teléfono",
-      "identifierPlaceholder": "tu@ejemplo.com · o · +254 712 345 678",
-      "identifierHint": "Los propietarios inician sesión con correo. El personal usa el número que les diste.",
       "passwordLabel": "Contraseña",
       "submit": "Iniciar sesión",
       "noAccount": "¿No tienes cuenta?",

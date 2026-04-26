@@ -190,10 +190,7 @@
     "login": {
       "kicker": "Bem-vindo de volta",
       "title": "Entrar",
-      "subtitle": "Acesse o painel ao vivo do seu restaurante.",
       "identifierLabel": "E-mail ou número de telefone",
-      "identifierPlaceholder": "voce@exemplo.com · ou · +254 712 345 678",
-      "identifierHint": "Proprietários entram com e-mail. Funcionários usam o telefone que você cadastrou.",
       "passwordLabel": "Senha",
       "submit": "Entrar",
       "noAccount": "Não tem conta?",

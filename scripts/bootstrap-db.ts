@@ -1,10 +1,14 @@
 /**
- * One-shot bootstrap:
- *   1. Applies the push-trigger migration (triggers + realtime publication)
- *   2. Applies the RLS policies
- *   3. Seeds a demo restaurant with tables + menu + an initial live order
+ * Production database bootstrap — idempotent migration runner + verifier.
  *
- * Idempotent — safe to re-run.
+ *   1. Removes any 'demo' restaurant (and cascade-cleans its data) if present.
+ *   2. Applies the push-trigger + realtime publication migration.
+ *   3. Applies the RLS policy migration.
+ *   4. Applies the partial unique index on tables(restaurant_id, label).
+ *   5. Verifies RLS state, policy count, and the customer-scan hot-path indexes.
+ *
+ * Safe to re-run any time. Does NOT seed demo data — production database
+ * is intentionally empty and waits for real signups via the auth flow.
  *
  * Usage:  npm run db:bootstrap
  */
@@ -27,17 +31,67 @@ if (dbUrl.includes("[YOUR-PASSWORD]")) {
 
 const sql = postgres(dbUrl, { prepare: false, onnotice: () => {} });
 
+// Indexes the customer QR-scan page depends on. Verified after migrations run.
+const HOT_PATH_INDEXES: { table: string; index: string; why: string }[] = [
+  { table: "restaurants", index: "restaurants_slug_unique", why: "slug → restaurant lookup (unique)" },
+  { table: "tables", index: "tables_pkey", why: "table UUID lookup" },
+  { table: "tables", index: "tables_restaurant_idx", why: "restaurant → all tables" },
+  { table: "tables", index: "tables_live_idx", why: "dashboard live tables (partial: archived_at IS NULL)" },
+  { table: "tables", index: "tables_unique_live_label", why: "race-safe duplicate-label guard (partial unique)" },
+  { table: "menu_categories", index: "menu_categories_rid_pos_idx", why: "categories ordered by position" },
+  { table: "menu_items", index: "menu_items_available_idx", why: "available items by position (partial: available = true)" },
+  { table: "orders", index: "orders_restaurant_status_idx", why: "dashboard inbox order list" },
+  { table: "requests", index: "requests_restaurant_status_idx", why: "dashboard inbox request list" },
+];
+
 async function main() {
+  console.log("→ removing demo data if present");
+  await cleanDemo();
+
   console.log("→ applying push triggers + realtime publication");
   await runSqlFile("supabase/migrations/20260423000000_push_triggers.sql");
 
   console.log("→ applying RLS policies");
   await runSqlFile("supabase/migrations/20260423000001_rls.sql");
 
-  console.log("→ seeding demo restaurant");
-  await seedDemo();
+  console.log("→ applying tables_unique_live_label partial unique index");
+  await runSqlFile("supabase/migrations/20260424000000_tables_unique_label.sql");
 
-  console.log("✓ bootstrap complete");
+  console.log("→ verifying production state");
+  await verify();
+
+  console.log("✓ database is production-ready");
+}
+
+/**
+ * Cascade-deletes the 'demo' restaurant and everything that hangs off it.
+ * Order matters: order_items.menu_item_id has ON DELETE RESTRICT, so we drain
+ * orders (which cascades to order_items) before the restaurants delete fires
+ * the menu_items cascade.
+ */
+async function cleanDemo() {
+  const removed = await sql.begin(async (tx) => {
+    await tx`
+      delete from order_items
+      where order_id in (
+        select o.id from orders o
+        join restaurants r on o.restaurant_id = r.id
+        where r.slug = 'demo'
+      )
+    `;
+    await tx`
+      delete from orders
+      where restaurant_id in (select id from restaurants where slug = 'demo')
+    `;
+    return tx<{ id: string; name: string }[]>`
+      delete from restaurants where slug = 'demo' returning id, name
+    `;
+  });
+  if (removed.length > 0) {
+    console.log(`  removed demo restaurant '${removed[0].name}' (${removed[0].id})`);
+  } else {
+    console.log("  no demo restaurant found");
+  }
 }
 
 async function runSqlFile(relPath: string) {
@@ -46,139 +100,83 @@ async function runSqlFile(relPath: string) {
   await sql.unsafe(content);
 }
 
-async function seedDemo() {
-  const [existing] = await sql<{ id: string }[]>`
-    select id from restaurants where slug = 'demo' limit 1
-  `;
-  if (existing) {
-    console.log("  demo restaurant already seeded — skipping");
-    return;
-  }
-
-  const [restaurant] = await sql<{ id: string }[]>`
-    insert into restaurants (slug, name, default_locale, supported_locales, currency, timezone)
-    values (
-      'demo',
-      'Demo Bistro',
-      'en',
-      '["en","fr","es","pt","zh"]'::jsonb,
-      'USD',
-      'UTC'
-    )
-    returning id
-  `;
-  const rid = restaurant.id;
-
-  await sql`
-    insert into tables (restaurant_id, label)
-    select ${rid}, lpad(g::text, 2, '0')
-    from generate_series(1, 15) g
-  `;
-
-  const [starters, mains, drinks] = await sql<{ id: string }[]>`
-    insert into menu_categories (restaurant_id, name_translations, position) values
-      (${rid}, ${sql.json({ en: "Starters", fr: "Entrées", es: "Entrantes", pt: "Entradas", zh: "开胃菜" })}, 1),
-      (${rid}, ${sql.json({ en: "Mains", fr: "Plats principaux", es: "Principales", pt: "Pratos principais", zh: "主菜" })}, 2),
-      (${rid}, ${sql.json({ en: "Drinks", fr: "Boissons", es: "Bebidas", pt: "Bebidas", zh: "饮品" })}, 3)
-    returning id
-  `;
-
-  const items = [
-    {
-      cat: starters.id,
-      name: { en: "Samosa", fr: "Samoussa", es: "Samosa", pt: "Samosa", zh: "咖喱角" },
-      desc: {
-        en: "Crispy pastry with spiced beef filling",
-        fr: "Pâtisserie croustillante à la viande épicée",
-        es: "Empanadilla crujiente con carne especiada",
-        pt: "Pastel crocante com recheio de carne temperada",
-        zh: "酥脆香辣牛肉角",
-      },
-      price: 3.5,
-      position: 1,
-    },
-    {
-      cat: starters.id,
-      name: { en: "Tomato Soup", fr: "Soupe de tomate", es: "Sopa de tomate", pt: "Sopa de tomate", zh: "番茄汤" },
-      desc: {
-        en: "Fresh roasted tomatoes with basil",
-        fr: "Tomates fraîches rôties au basilic",
-        es: "Tomates frescos asados con albahaca",
-        pt: "Tomates frescos assados com manjericão",
-        zh: "新鲜烤番茄配罗勒",
-      },
-      price: 4.0,
-      position: 2,
-    },
-    {
-      cat: mains.id,
-      name: { en: "Grilled Beef", fr: "Bœuf grillé", es: "Carne a la parrilla", pt: "Carne grelhada", zh: "烤牛肉" },
-      desc: {
-        en: "Flame-grilled beef, served with fresh salsa",
-        fr: "Bœuf grillé à la flamme, servi avec salsa fraîche",
-        es: "Carne a la parrilla con salsa fresca",
-        pt: "Carne grelhada com salsa fresca",
-        zh: "炭火烤牛肉配莎莎酱",
-      },
-      price: 12.0,
-      position: 1,
-    },
-    {
-      cat: mains.id,
-      name: { en: "Margherita Pizza", fr: "Pizza Margherita", es: "Pizza Margherita", pt: "Pizza Margherita", zh: "玛格丽特披萨" },
-      desc: {
-        en: "Tomato, mozzarella, fresh basil",
-        fr: "Tomate, mozzarella, basilic frais",
-        es: "Tomate, mozzarella, albahaca fresca",
-        pt: "Tomate, mussarela, manjericão fresco",
-        zh: "番茄、马苏里拉、新鲜罗勒",
-      },
-      price: 10.0,
-      position: 2,
-    },
-    {
-      cat: drinks.id,
-      name: { en: "Masala Chai", fr: "Thé masala", es: "Té masala", pt: "Chá masala", zh: "马萨拉茶" },
-      desc: {
-        en: "Spiced milk tea",
-        fr: "Thé au lait épicé",
-        es: "Té con leche especiado",
-        pt: "Chá de leite com especiarias",
-        zh: "香料奶茶",
-      },
-      price: 2.0,
-      position: 1,
-    },
-    {
-      cat: drinks.id,
-      name: { en: "Cappuccino", fr: "Cappuccino", es: "Capuchino", pt: "Cappuccino", zh: "卡布奇诺" },
-      desc: {
-        en: "Espresso topped with steamed milk foam",
-        fr: "Espresso recouvert de mousse de lait",
-        es: "Espresso con espuma de leche",
-        pt: "Espresso com espuma de leite",
-        zh: "浓缩咖啡配奶泡",
-      },
-      price: 3.5,
-      position: 2,
-    },
+async function verify() {
+  // 1. RLS enabled on every tenant table
+  const tenantTables = [
+    "restaurants", "tables", "menu_categories", "menu_items",
+    "orders", "order_items", "requests", "staff_users", "push_subscriptions",
   ];
-
-  for (const it of items) {
-    await sql`
-      insert into menu_items
-        (restaurant_id, category_id, name_translations, description_translations, price, position)
-      values
-        (${rid}, ${it.cat}, ${sql.json(it.name)}, ${sql.json(it.desc)}, ${it.price}, ${it.position})
-    `;
+  const rls = await sql<{ tablename: string; rowsecurity: boolean }[]>`
+    select tablename, rowsecurity from pg_tables
+    where schemaname='public' and tablename = any(${tenantTables})
+    order by tablename
+  `;
+  const rlsOff = rls.filter((r) => !r.rowsecurity);
+  if (rlsOff.length > 0) {
+    throw new Error(`RLS off on: ${rlsOff.map((r) => r.tablename).join(", ")}`);
   }
+  console.log(`  ✓ RLS enabled on all ${rls.length} tenant tables`);
 
-  console.log(`  seeded restaurant '${rid}' — 15 tables, 3 categories, 6 items`);
+  // 2. Policies present
+  const [{ cnt: polCnt }] = await sql<{ cnt: number }[]>`
+    select count(*)::int as cnt from pg_policies where schemaname='public'
+  `;
+  if (polCnt < 12) {
+    throw new Error(`Only ${polCnt} RLS policies found — expected ≥ 12`);
+  }
+  console.log(`  ✓ ${polCnt} RLS policies in place`);
+
+  // 3. Customer-scan hot-path indexes
+  const indexes = await sql<{ tablename: string; indexname: string }[]>`
+    select tablename, indexname from pg_indexes where schemaname='public'
+  `;
+  const have = new Set(indexes.map((i) => `${i.tablename}.${i.indexname}`));
+  const missing = HOT_PATH_INDEXES.filter((h) => !have.has(`${h.table}.${h.index}`));
+  if (missing.length > 0) {
+    console.error("  ✗ Missing indexes:");
+    for (const m of missing) console.error(`     - ${m.table}.${m.index} — ${m.why}`);
+    throw new Error("Run `npm run db:push` to sync drizzle schema, then re-run this.");
+  }
+  console.log(`  ✓ all ${HOT_PATH_INDEXES.length} customer-scan hot-path indexes present`);
+
+  // 4. Realtime publication coverage
+  const pub = await sql<{ tablename: string }[]>`
+    select tablename from pg_publication_tables where pubname='supabase_realtime'
+  `;
+  const need = new Set(["orders", "order_items", "requests"]);
+  const have2 = new Set(pub.map((p) => p.tablename));
+  for (const n of need) {
+    if (!have2.has(n)) throw new Error(`'${n}' missing from supabase_realtime publication`);
+  }
+  console.log(`  ✓ realtime publication covers orders, order_items, requests`);
+
+  // 5. Triggers wired
+  const trg = await sql<{ trigger_name: string; event_object_table: string }[]>`
+    select trigger_name, event_object_table from information_schema.triggers
+    where trigger_schema='public' and event_object_table in ('orders','requests')
+  `;
+  const trgPairs = new Set(trg.map((t) => `${t.event_object_table}.${t.trigger_name}`));
+  if (!trgPairs.has("orders.on_order_insert_notify")) {
+    throw new Error("trigger on_order_insert_notify missing on orders");
+  }
+  if (!trgPairs.has("requests.on_request_insert_notify")) {
+    throw new Error("trigger on_request_insert_notify missing on requests");
+  }
+  console.log(`  ✓ insert-notify triggers wired on orders + requests`);
+
+  // 6. Final tenant + auth user counts
+  const [{ rest_cnt }] = await sql<{ rest_cnt: number }[]>`
+    select count(*)::int as rest_cnt from public.restaurants
+  `;
+  const [{ auth_cnt }] = await sql<{ auth_cnt: number }[]>`
+    select count(*)::int as auth_cnt from auth.users
+  `;
+  console.log(`  ℹ ${rest_cnt} restaurant(s), ${auth_cnt} auth user(s)`);
 }
 
 main()
   .catch((e) => {
-    console.error(e);
+    console.error("✗", e instanceof Error ? e.message : e);
     process.exit(1);
   })
   .finally(() => sql.end({ timeout: 5 }));
