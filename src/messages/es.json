@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "brand": "cron.menu",
+    "title": "cron.menu — Escanea. Pide. Listo.",
+    "description": "La forma más rápida para que los restaurantes atiendan a sus clientes. Escanea el QR de tu mesa, explora el menú, pide y llama al mesero.",
+    "keywords": "menú QR, pedido en restaurante, llamar mesero, menú sin contacto, pedido en mesa, software restaurante, código QR, menú digital, panel de restaurante",
+    "ogAlt": "cron.menu — el menú QR para restaurantes: los clientes piden y llaman al mesero con un toque."
+  },
+  "common": {
+    "appName": "cron.menu",
+    "loading": "Cargando...",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Añadir",
+    "back": "Atrás",
+    "submit": "Enviar",
+    "language": "Idioma"
+  },
+  "landing": {
+    "hero": {
+      "title": "Escanea. Pide. Listo.",
+      "subtitle": "La forma más rápida para que los restaurantes atiendan a sus clientes. Un escaneo — tu menú en su pantalla. Un toque — un mesero en su mesa.",
+      "ctaPrimary": "Empieza gratis",
+      "ctaSecondary": "Ver cómo funciona"
+    },
+    "features": {
+      "title": "Todo lo que tu restaurante necesita",
+      "scan": { "title": "Escanea para ver el menú", "desc": "Los clientes escanean el QR y ven tu menú al instante — sin aplicación." },
+      "order": { "title": "Pide desde la mesa", "desc": "Los clientes añaden al carrito. Los pedidos llegan a tu panel en tiempo real." },
+      "callWaiter": { "title": "Llamar al mesero", "desc": "Un toque avisa al personal correcto. Ya no hace falta hacer señas." },
+      "global": { "title": "Funciona en cualquier idioma", "desc": "Detecta el idioma del cliente automáticamente. Inglés, francés, español, portugués, chino — y más próximamente." }
+    }
+  },
+  "menu": {
+    "addToCart": "Añadir al carrito",
+    "callWaiter": "Llamar al mesero",
+    "viewCart": "Ver carrito",
+    "unavailable": "No disponible",
+    "welcome": "Bienvenido a {restaurant}",
+    "table": "Mesa {number}",
+    "emptyMenu": "Menú próximamente — pregunta a un mesero.",
+    "placeOrderError": "No pudimos enviar tu pedido. Inténtalo de nuevo.",
+    "callWaiterError": "No pudimos enviar la solicitud. Inténtalo de nuevo."
+  },
+  "customer": {
+    "tableUnavailable": {
+      "title": "Esta mesa no está activa",
+      "body": "Pida ayuda a un miembro del personal."
+    }
+  },
+  "cart": {
+    "title": "Tu carrito",
+    "empty": "Tu carrito está vacío",
+    "subtotal": "Subtotal",
+    "placeOrder": "Realizar pedido",
+    "orderPlaced": "¡Pedido enviado!",
+    "remove": "Quitar",
+    "viewCount": "{count, plural, =0 {Ver carrito} one {Ver carrito · # artículo} other {Ver carrito · # artículos}}"
+  },
+  "waiter": {
+    "title": "Llamar al mesero",
+    "reasonPlaceholder": "¿Qué necesitas? (opcional)",
+    "presets": { "bill": "Traer la cuenta", "water": "Agua por favor", "help": "Necesito ayuda" },
+    "send": "Enviar solicitud",
+    "sent": "Un mesero va en camino"
+  },
+  "order": {
+    "status": { "pending": "Pedido recibido", "preparing": "Preparándose", "served": "Servido" }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "subtitle": "Pedidos y solicitudes en vivo desde tu comedor.",
+    "nav": { "inbox": "Bandeja", "menu": "Menú", "tables": "Mesas", "staff": "Equipo" },
+    "signOut": "Cerrar sesión",
+    "staff": {
+      "title": "Tu equipo",
+      "addTitle": "Añadir miembro",
+      "nameLabel": "Nombre",
+      "phoneLabel": "Número de teléfono",
+      "passwordLabel": "Contraseña",
+      "addSubmit": "Añadir",
+      "remove": "Eliminar",
+      "confirmRemove": "¿Retirar a este miembro? Se cerrará su sesión en todos los dispositivos.",
+      "owner": "Propietario",
+      "you": "tú"
+    },
+    "live": { "label": "En vivo", "offline": "Desconectado", "reconnecting": "Reconectando" },
+    "stats": {
+      "activeOrders": "{count, plural, =0 {Sin pedidos} one {# pedido} other {# pedidos}}",
+      "openRequests": "{count, plural, =0 {Sin solicitudes} one {# solicitud} other {# solicitudes}}",
+      "avgResponse": "Tiempo medio · {minutes}m",
+      "tablesActive": "{count, plural, =0 {Salón vacío} one {# mesa ocupada} other {# mesas ocupadas}}"
+    },
+    "inbox": {
+      "orders": "Pedidos",
+      "requests": "Solicitudes",
+      "empty": "Todo en orden. Nada pendiente.",
+      "emptyHint": "Los nuevos pedidos y llamadas aparecen aquí en tiempo real.",
+      "newOrder": "Nuevo pedido mesa {table}",
+      "newRequest": "Mesa {table} llama al mesero",
+      "markPreparing": "Preparando",
+      "markServed": "Servido",
+      "resolve": "Resolver",
+      "minAgo": "hace {count}m",
+      "justNow": "ahora mismo",
+      "tableLabel": "Mesa {number}"
+    },
+    "install": {
+      "title": "Instalar cron.menu",
+      "description": "Recibe notificaciones en vivo cuando un cliente pide o llama al mesero — incluso con la app cerrada.",
+      "install": "Instalar",
+      "dismiss": "Más tarde"
+    },
+    "sound": {
+      "mute": "Silenciar alertas",
+      "unmute": "Activar alertas sonoras"
+    },
+    "notifications": {
+      "title": "Activar notificaciones push",
+      "description": "Recibe avisos cuando llegue un pedido o una llamada — incluso con el teléfono bloqueado.",
+      "enable": "Activar",
+      "enabling": "Activando…",
+      "dismiss": "Más tarde",
+      "blockedTitle": "Las notificaciones están bloqueadas",
+      "blockedDescription": "Has bloqueado las notificaciones para este sitio. Permítelas en la configuración del navegador para recibir alertas."
+    },
+    "tables": {
+      "title": "Mesas",
+      "count": "{count, plural, =0 {Aún no hay mesas} one {# mesa} other {# mesas}}",
+      "add": "Añadir mesa",
+      "addTitle": "Añadir una mesa",
+      "addSingle": "Una",
+      "addBulk": "En lote",
+      "addSubmit": "Crear",
+      "labelLabel": "Etiqueta",
+      "labelTag": "Mesa",
+      "bulkPrefix": "Prefijo (opcional)",
+      "bulkFrom": "Desde",
+      "bulkTo": "Hasta",
+      "bulkPreview": "Crea de {first} a {last}",
+      "rename": "Renombrar",
+      "delete": "Eliminar",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "download": "Descargar",
+      "print": "Imprimir",
+      "printAll": "Imprimir todo",
+      "deleteTitle": "¿Eliminar mesa?",
+      "deleteBody": "¿Ocultar «{label}» del panel? Su historial de pedidos se conserva para los informes.",
+      "deleteConfirm": "Eliminar",
+      "deleteCancel": "Cancelar",
+      "deleted": "Mesa eliminada",
+      "emptyTitle": "Aún no hay mesas",
+      "emptyBody": "Añade tu primera mesa para generar un QR que los clientes puedan escanear.",
+      "urlHint": "Cada QR abre tu menú en {name} en el idioma del cliente. No hace falta reimprimir al renombrar una mesa.",
+      "errors": {
+        "labelRequired": "Introduce una etiqueta.",
+        "rangeInvalid": "Desde y Hasta deben ser números.",
+        "duplicateLabels": "Ya en uso: {labels}",
+        "duplicate_label": "Esa etiqueta ya está en uso.",
+        "bulkLimitExceeded": "Solo puedes añadir {limit} mesas a la vez.",
+        "bulk_limit_exceeded": "Límite de lote superado.",
+        "deleteFailed": "No se pudo eliminar la mesa.",
+        "invalid_body": "Esa entrada no es válida.",
+        "not_found": "Mesa no encontrada.",
+        "forbidden": "No tienes permiso.",
+        "unauthenticated": "Tu sesión ha terminado.",
+        "unknown": "Algo salió mal."
+      },
+      "printSheet": {
+        "empty": "Nada que imprimir.",
+        "scanLabel": "Escanea para pedir",
+        "tableTag": "Mesa",
+        "poweredBy": "Con tecnología de cron.menu"
+      }
+    },
+    "menuMgmt": {
+      "title": "Menú",
+      "addCategory": "Añadir categoría",
+      "addItem": "Añadir artículo",
+      "itemName": "Nombre del artículo",
+      "itemDescription": "Descripción",
+      "itemPrice": "Precio",
+      "available": "Disponible"
+    }
+  },
+  "auth": {
+    "login": {
+      "kicker": "Bienvenido de nuevo",
+      "title": "Iniciar sesión",
+      "subtitle": "Accede al panel en vivo de tu restaurante.",
+      "identifierLabel": "Correo o número de teléfono",
+      "identifierPlaceholder": "tu@ejemplo.com · o · +254 712 345 678",
+      "identifierHint": "Los propietarios inician sesión con correo. El personal usa el número que les diste.",
+      "passwordLabel": "Contraseña",
+      "submit": "Iniciar sesión",
+      "noAccount": "¿No tienes cuenta?",
+      "createAccount": "Crea una"
+    },
+    "signup": {
+      "kicker": "Sirve con inteligencia",
+      "title": "Crea tu restaurante",
+      "businessNameLabel": "Nombre del negocio",
+      "emailLabel": "Correo electrónico",
+      "passwordLabel": "Contraseña",
+      "submit": "Crear cuenta",
+      "haveAccount": "¿Ya estás registrado?",
+      "signIn": "Iniciar sesión"
+    },
+    "confirm": {
+      "kicker": "Un último paso",
+      "title": "Revisa tu correo",
+      "sentTo": "Enviamos un enlace a",
+      "body": "Haz clic en el enlace del correo para verificar tu dirección. Puedes dejar esta ventana abierta — después de verificar irás directo al panel.",
+      "didntArrive": "¿No llegó el correo?",
+      "signIn": "Intenta iniciar sesión"
+    },
+    "errors": {
+      "identifierInvalid": "Introduce un correo o teléfono válido.",
+      "phoneEmpty": "Introduce un número de teléfono.",
+      "phoneInvalidFormat": "Ese número no parece válido. Incluye el código de país.",
+      "phoneInvalidNumber": "Ese número de teléfono no es válido.",
+      "emailInvalid": "Introduce un correo válido.",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+      "restaurantTooShort": "El nombre del restaurante es demasiado corto.",
+      "invalidCredentials": "Correo/teléfono o contraseña incorrectos.",
+      "phone_already_registered": "Ese número ya está registrado.",
+      "email_already_registered": "Ese correo ya está registrado.",
+      "auth_create_failed": "No pudimos crear la cuenta. Inténtalo de nuevo.",
+      "auth_user_not_found": "No encontramos esa cuenta. Regístrate de nuevo.",
+      "already_onboarded": "Esta cuenta ya está asociada a un restaurante.",
+      "setup_failed": "Cuenta creada pero la configuración falló. Contacta al soporte.",
+      "unauthenticated": "Tu sesión ha terminado. Inicia sesión de nuevo.",
+      "forbidden": "No tienes permiso para hacer eso.",
+      "cannot_remove_self": "No puedes eliminarte a ti mismo.",
+      "cannot_remove_owner": "El propietario no puede ser eliminado.",
+      "not_found": "Ese miembro no existe.",
+      "delete_failed": "No se pudo eliminar al miembro.",
+      "unknown": "Algo salió mal. Por favor, inténtalo de nuevo."
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "restaurants": "Restaurantes",
+    "createRestaurant": "Crear restaurante",
+    "form": {
+      "name": "Nombre del restaurante",
+      "slug": "Slug URL",
+      "defaultLocale": "Idioma predeterminado",
+      "currency": "Moneda",
+      "timezone": "Zona horaria",
+      "ownerEmail": "Email del propietario"
+    }
+  }
+}

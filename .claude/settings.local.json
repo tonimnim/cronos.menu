@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npx --yes create-next-app@latest . --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack --yes)",
       "Bash(npx --yes shadcn@latest init --help)",
-      "Bash(npx --yes shadcn@latest init --yes --defaults --force)"
+      "Bash(npx --yes shadcn@latest init --yes --defaults --force)",
+      "Bash(npm run *)",
+      "Bash(git add *)"
     ]
   }
 }

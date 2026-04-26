@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "brand": "cron.menu",
+    "title": "cron.menu — Scan. Order. Done.",
+    "description": "The fastest way for restaurants to serve guests. Scan the QR code on your table, browse the menu, order, and call a waiter.",
+    "keywords": "QR menu, restaurant ordering, call waiter, contactless menu, table ordering, restaurant software, QR code menu, digital menu, restaurant dashboard",
+    "ogAlt": "cron.menu — the restaurant QR menu for guests that orders and calls a waiter with one tap."
+  },
+  "common": {
+    "appName": "cron.menu",
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "back": "Back",
+    "submit": "Submit",
+    "language": "Language"
+  },
+  "landing": {
+    "hero": {
+      "title": "Scan. Order. Done.",
+      "subtitle": "The fastest way for restaurants to serve guests. One scan — your menu on their screen. One tap — a waiter at their table.",
+      "ctaPrimary": "Get started free",
+      "ctaSecondary": "See how it works"
+    },
+    "features": {
+      "title": "Everything your restaurant needs",
+      "scan": { "title": "Scan to view menu", "desc": "Guests scan a table QR code and see your menu instantly — no app needed." },
+      "order": { "title": "Order from the table", "desc": "Guests add items to cart. Orders arrive on your dashboard in real time." },
+      "callWaiter": { "title": "Call a waiter", "desc": "One tap pings the right staff. No more waving from across the room." },
+      "global": { "title": "Works in any language", "desc": "Auto-detects guest language. English, French, Spanish, Portuguese, Chinese — more on the way." }
+    }
+  },
+  "menu": {
+    "addToCart": "Add to cart",
+    "callWaiter": "Call waiter",
+    "viewCart": "View cart",
+    "unavailable": "Unavailable",
+    "welcome": "Welcome to {restaurant}",
+    "table": "Table {number}",
+    "emptyMenu": "Menu coming soon — please ask a waiter.",
+    "placeOrderError": "We couldn't send your order. Please try again.",
+    "callWaiterError": "We couldn't send the request. Please try again."
+  },
+  "customer": {
+    "tableUnavailable": {
+      "title": "This table isn't active",
+      "body": "Please ask a staff member for help."
+    }
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "placeOrder": "Place order",
+    "orderPlaced": "Order placed!",
+    "remove": "Remove",
+    "viewCount": "{count, plural, =0 {View cart} one {View cart · # item} other {View cart · # items}}"
+  },
+  "waiter": {
+    "title": "Call a waiter",
+    "reasonPlaceholder": "What do you need? (optional)",
+    "presets": { "bill": "Bring the bill", "water": "Water please", "help": "I need help" },
+    "send": "Send request",
+    "sent": "A waiter is on the way"
+  },
+  "order": {
+    "status": { "pending": "Order received", "preparing": "Being prepared", "served": "Served" }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Live orders and requests from your dining room.",
+    "nav": { "inbox": "Inbox", "menu": "Menu", "tables": "Tables", "staff": "Staff" },
+    "signOut": "Sign out",
+    "staff": {
+      "title": "Your team",
+      "addTitle": "Add member",
+      "nameLabel": "Name",
+      "phoneLabel": "Phone number",
+      "passwordLabel": "Password",
+      "addSubmit": "Add",
+      "remove": "Remove",
+      "confirmRemove": "Remove this member? They'll be signed out of every device.",
+      "owner": "Owner",
+      "you": "you"
+    },
+    "live": { "label": "Live", "offline": "Offline", "reconnecting": "Reconnecting" },
+    "stats": {
+      "activeOrders": "{count, plural, =0 {No active orders} one {# order} other {# orders}}",
+      "openRequests": "{count, plural, =0 {No open requests} one {# request} other {# requests}}",
+      "avgResponse": "Avg. response · {minutes}m",
+      "tablesActive": "{count, plural, =0 {Empty room} one {# table seated} other {# tables seated}}"
+    },
+    "inbox": {
+      "orders": "Orders",
+      "requests": "Requests",
+      "empty": "All clear. Nothing waiting.",
+      "emptyHint": "New orders and calls appear here in real time.",
+      "newOrder": "New order at table {table}",
+      "newRequest": "Table {table} needs a waiter",
+      "markPreparing": "Start preparing",
+      "markServed": "Mark served",
+      "resolve": "Resolve",
+      "minAgo": "{count}m ago",
+      "justNow": "just now",
+      "tableLabel": "Table {number}"
+    },
+    "install": {
+      "title": "Install cron.menu",
+      "description": "Get live notifications when a guest orders or calls a waiter — even when the app is closed.",
+      "install": "Install",
+      "dismiss": "Not now"
+    },
+    "sound": {
+      "mute": "Mute alerts",
+      "unmute": "Turn on sound alerts"
+    },
+    "notifications": {
+      "title": "Turn on push notifications",
+      "description": "Get alerted when a new order or waiter call comes in — even with the phone locked.",
+      "enable": "Enable",
+      "enabling": "Enabling…",
+      "dismiss": "Not now",
+      "blockedTitle": "Notifications are blocked",
+      "blockedDescription": "You've blocked notifications for this site. Allow them in your browser settings to receive alerts."
+    },
+    "tables": {
+      "title": "Tables",
+      "count": "{count, plural, =0 {No tables yet} one {# table} other {# tables}}",
+      "add": "Add table",
+      "addTitle": "Add a table",
+      "addSingle": "Single",
+      "addBulk": "Bulk",
+      "addSubmit": "Create",
+      "labelLabel": "Label",
+      "labelTag": "Table",
+      "bulkPrefix": "Prefix (optional)",
+      "bulkFrom": "From",
+      "bulkTo": "To",
+      "bulkPreview": "Creates {first} through {last}",
+      "rename": "Rename",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "download": "Download",
+      "print": "Print",
+      "printAll": "Print all",
+      "deleteTitle": "Delete table?",
+      "deleteBody": "Hide \"{label}\" from the dashboard? Its order history is preserved for reports.",
+      "deleteConfirm": "Delete",
+      "deleteCancel": "Cancel",
+      "deleted": "Table deleted",
+      "emptyTitle": "No tables yet",
+      "emptyBody": "Add your first table to generate a QR code guests can scan.",
+      "urlHint": "Each QR opens your menu at {name} with the guest's language auto-detected. Reprinting isn't needed when you rename a table.",
+      "errors": {
+        "labelRequired": "Enter a label.",
+        "rangeInvalid": "From and To must both be numbers.",
+        "duplicateLabels": "Already in use: {labels}",
+        "duplicate_label": "That label is already in use.",
+        "bulkLimitExceeded": "You can only add {limit} tables at a time.",
+        "bulk_limit_exceeded": "Bulk limit exceeded.",
+        "deleteFailed": "Couldn't delete the table.",
+        "invalid_body": "That input isn't valid.",
+        "not_found": "Table not found.",
+        "forbidden": "You don't have permission to do that.",
+        "unauthenticated": "Your session has ended.",
+        "unknown": "Something went wrong."
+      },
+      "printSheet": {
+        "empty": "Nothing to print.",
+        "scanLabel": "Scan to order",
+        "tableTag": "Table",
+        "poweredBy": "Powered by cron.menu"
+      }
+    },
+    "menuMgmt": {
+      "title": "Menu",
+      "addCategory": "Add category",
+      "addItem": "Add item",
+      "itemName": "Item name",
+      "itemDescription": "Description",
+      "itemPrice": "Price",
+      "available": "Available"
+    }
+  },
+  "auth": {
+    "login": {
+      "kicker": "Welcome back",
+      "title": "Sign in",
+      "subtitle": "Access your restaurant's live dashboard.",
+      "identifierLabel": "Email or phone number",
+      "identifierPlaceholder": "you@example.com · or · +254 712 345 678",
+      "identifierHint": "Owners sign in with email. Staff use the phone number you set.",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create one"
+    },
+    "signup": {
+      "kicker": "Start serving smarter",
+      "title": "Create your restaurant",
+      "businessNameLabel": "Business name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Create account",
+      "haveAccount": "Already registered?",
+      "signIn": "Sign in"
+    },
+    "confirm": {
+      "kicker": "One last step",
+      "title": "Check your email",
+      "sentTo": "We sent a link to",
+      "body": "Click the link in the email to verify your address. This window can stay open — after verifying you'll land straight on your dashboard.",
+      "didntArrive": "Didn't get the email?",
+      "signIn": "Try signing in"
+    },
+    "errors": {
+      "identifierInvalid": "Enter a valid email or phone number.",
+      "phoneEmpty": "Enter a phone number.",
+      "phoneInvalidFormat": "That doesn't look like a phone number. Try again with the country code.",
+      "phoneInvalidNumber": "That phone number isn't valid.",
+      "emailInvalid": "Enter a valid email address.",
+      "passwordTooShort": "Password must be at least 8 characters.",
+      "restaurantTooShort": "Restaurant name is too short.",
+      "invalidCredentials": "Wrong email/phone or password.",
+      "phone_already_registered": "That phone number is already registered.",
+      "email_already_registered": "That email is already registered.",
+      "auth_create_failed": "We couldn't create the account. Try again.",
+      "auth_user_not_found": "We couldn't find that account. Please sign up again.",
+      "already_onboarded": "This account is already linked to a restaurant.",
+      "setup_failed": "Account created but setup failed. Contact support.",
+      "unauthenticated": "Your session has ended. Please sign in again.",
+      "forbidden": "You don't have permission to do that.",
+      "cannot_remove_self": "You can't remove yourself.",
+      "cannot_remove_owner": "The owner can't be removed.",
+      "not_found": "That member doesn't exist.",
+      "delete_failed": "Couldn't remove that member.",
+      "unknown": "Something went wrong. Please try again."
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "restaurants": "Restaurants",
+    "createRestaurant": "Create restaurant",
+    "form": {
+      "name": "Restaurant name",
+      "slug": "URL slug",
+      "defaultLocale": "Default language",
+      "currency": "Currency",
+      "timezone": "Timezone",
+      "ownerEmail": "Owner email"
+    }
+  }
+}

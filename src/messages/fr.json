@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "brand": "cron.menu",
+    "title": "cron.menu — Scannez. Commandez. Terminé.",
+    "description": "La façon la plus rapide pour les restaurants de servir leurs clients. Scannez le QR de votre table, parcourez le menu, commandez et appelez un serveur.",
+    "keywords": "menu QR, commande restaurant, appeler serveur, menu sans contact, commande à table, logiciel restaurant, code QR, menu numérique, tableau de bord restaurant",
+    "ogAlt": "cron.menu — le menu QR pour restaurants : les clients commandent et appellent un serveur en un tap."
+  },
+  "common": {
+    "appName": "cron.menu",
+    "loading": "Chargement...",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "back": "Retour",
+    "submit": "Envoyer",
+    "language": "Langue"
+  },
+  "landing": {
+    "hero": {
+      "title": "Scannez. Commandez. Terminé.",
+      "subtitle": "La façon la plus rapide pour les restaurants de servir leurs clients. Un scan — votre menu sur leur écran. Un tap — un serveur à leur table.",
+      "ctaPrimary": "Commencer gratuitement",
+      "ctaSecondary": "Voir comment ça marche"
+    },
+    "features": {
+      "title": "Tout ce dont votre restaurant a besoin",
+      "scan": { "title": "Scannez pour voir le menu", "desc": "Les clients scannent un QR code et voient votre menu instantanément — sans application." },
+      "order": { "title": "Commandez depuis la table", "desc": "Les clients ajoutent au panier. Les commandes arrivent en temps réel sur votre tableau de bord." },
+      "callWaiter": { "title": "Appeler un serveur", "desc": "Un tap alerte le bon membre du personnel. Plus besoin de faire signe à travers la salle." },
+      "global": { "title": "Fonctionne dans toutes les langues", "desc": "Détecte la langue du client automatiquement. Anglais, français, espagnol, portugais, chinois — et plus à venir." }
+    }
+  },
+  "menu": {
+    "addToCart": "Ajouter au panier",
+    "callWaiter": "Appeler un serveur",
+    "viewCart": "Voir le panier",
+    "unavailable": "Indisponible",
+    "welcome": "Bienvenue à {restaurant}",
+    "table": "Table {number}",
+    "emptyMenu": "Menu bientôt disponible — demandez à un serveur.",
+    "placeOrderError": "Impossible d'envoyer la commande. Réessayez.",
+    "callWaiterError": "Impossible d'envoyer la demande. Réessayez."
+  },
+  "customer": {
+    "tableUnavailable": {
+      "title": "Cette table n'est pas active",
+      "body": "Veuillez demander de l'aide à un membre du personnel."
+    }
+  },
+  "cart": {
+    "title": "Votre panier",
+    "empty": "Votre panier est vide",
+    "subtotal": "Sous-total",
+    "placeOrder": "Passer commande",
+    "orderPlaced": "Commande envoyée !",
+    "remove": "Retirer",
+    "viewCount": "{count, plural, =0 {Voir le panier} one {Voir le panier · # article} other {Voir le panier · # articles}}"
+  },
+  "waiter": {
+    "title": "Appeler un serveur",
+    "reasonPlaceholder": "Que souhaitez-vous ? (facultatif)",
+    "presets": { "bill": "Apporter l'addition", "water": "De l'eau s'il vous plaît", "help": "J'ai besoin d'aide" },
+    "send": "Envoyer la demande",
+    "sent": "Un serveur arrive"
+  },
+  "order": {
+    "status": { "pending": "Commande reçue", "preparing": "En préparation", "served": "Servie" }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "subtitle": "Commandes et demandes en direct de votre salle.",
+    "nav": { "inbox": "Boîte de réception", "menu": "Menu", "tables": "Tables", "staff": "Équipe" },
+    "signOut": "Se déconnecter",
+    "staff": {
+      "title": "Votre équipe",
+      "addTitle": "Ajouter un membre",
+      "nameLabel": "Nom",
+      "phoneLabel": "Numéro de téléphone",
+      "passwordLabel": "Mot de passe",
+      "addSubmit": "Ajouter",
+      "remove": "Supprimer",
+      "confirmRemove": "Retirer ce membre ? Il sera déconnecté de tous ses appareils.",
+      "owner": "Propriétaire",
+      "you": "vous"
+    },
+    "live": { "label": "En direct", "offline": "Hors ligne", "reconnecting": "Reconnexion" },
+    "stats": {
+      "activeOrders": "{count, plural, =0 {Aucune commande} one {# commande} other {# commandes}}",
+      "openRequests": "{count, plural, =0 {Aucune demande} one {# demande} other {# demandes}}",
+      "avgResponse": "Temps moyen · {minutes}m",
+      "tablesActive": "{count, plural, =0 {Salle vide} one {# table occupée} other {# tables occupées}}"
+    },
+    "inbox": {
+      "orders": "Commandes",
+      "requests": "Demandes",
+      "empty": "Tout est calme. Rien en attente.",
+      "emptyHint": "Les nouvelles commandes et appels apparaissent ici en temps réel.",
+      "newOrder": "Nouvelle commande table {table}",
+      "newRequest": "Table {table} demande un serveur",
+      "markPreparing": "En préparation",
+      "markServed": "Servie",
+      "resolve": "Résoudre",
+      "minAgo": "il y a {count}m",
+      "justNow": "à l'instant",
+      "tableLabel": "Table {number}"
+    },
+    "install": {
+      "title": "Installer cron.menu",
+      "description": "Recevez des notifications en direct quand un client commande ou appelle un serveur — même avec l'app fermée.",
+      "install": "Installer",
+      "dismiss": "Plus tard"
+    },
+    "sound": {
+      "mute": "Couper les alertes",
+      "unmute": "Activer les alertes sonores"
+    },
+    "notifications": {
+      "title": "Activer les notifications push",
+      "description": "Soyez alerté dès qu'une commande ou un appel arrive — même avec le téléphone verrouillé.",
+      "enable": "Activer",
+      "enabling": "Activation…",
+      "dismiss": "Plus tard",
+      "blockedTitle": "Les notifications sont bloquées",
+      "blockedDescription": "Vous avez bloqué les notifications pour ce site. Autorisez-les dans les paramètres de votre navigateur."
+    },
+    "tables": {
+      "title": "Tables",
+      "count": "{count, plural, =0 {Aucune table pour l'instant} one {# table} other {# tables}}",
+      "add": "Ajouter une table",
+      "addTitle": "Ajouter une table",
+      "addSingle": "Une",
+      "addBulk": "En série",
+      "addSubmit": "Créer",
+      "labelLabel": "Libellé",
+      "labelTag": "Table",
+      "bulkPrefix": "Préfixe (facultatif)",
+      "bulkFrom": "De",
+      "bulkTo": "À",
+      "bulkPreview": "Crée de {first} à {last}",
+      "rename": "Renommer",
+      "delete": "Supprimer",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "download": "Télécharger",
+      "print": "Imprimer",
+      "printAll": "Tout imprimer",
+      "deleteTitle": "Supprimer la table ?",
+      "deleteBody": "Masquer « {label} » du tableau de bord ? L'historique des commandes est conservé pour les rapports.",
+      "deleteConfirm": "Supprimer",
+      "deleteCancel": "Annuler",
+      "deleted": "Table supprimée",
+      "emptyTitle": "Aucune table",
+      "emptyBody": "Ajoutez votre première table pour générer un QR code à scanner.",
+      "urlHint": "Chaque QR ouvre votre menu à {name} dans la langue du client. Pas besoin de réimprimer quand vous renommez une table.",
+      "errors": {
+        "labelRequired": "Entrez un libellé.",
+        "rangeInvalid": "De et À doivent être des nombres.",
+        "duplicateLabels": "Déjà utilisés : {labels}",
+        "duplicate_label": "Ce libellé est déjà utilisé.",
+        "bulkLimitExceeded": "Vous ne pouvez ajouter que {limit} tables à la fois.",
+        "bulk_limit_exceeded": "Limite de série dépassée.",
+        "deleteFailed": "Impossible de supprimer la table.",
+        "invalid_body": "Cette saisie n'est pas valide.",
+        "not_found": "Table introuvable.",
+        "forbidden": "Vous n'avez pas la permission.",
+        "unauthenticated": "Votre session est terminée.",
+        "unknown": "Une erreur est survenue."
+      },
+      "printSheet": {
+        "empty": "Rien à imprimer.",
+        "scanLabel": "Scannez pour commander",
+        "tableTag": "Table",
+        "poweredBy": "Propulsé par cron.menu"
+      }
+    },
+    "menuMgmt": {
+      "title": "Menu",
+      "addCategory": "Ajouter une catégorie",
+      "addItem": "Ajouter un article",
+      "itemName": "Nom de l'article",
+      "itemDescription": "Description",
+      "itemPrice": "Prix",
+      "available": "Disponible"
+    }
+  },
+  "auth": {
+    "login": {
+      "kicker": "Bon retour",
+      "title": "Se connecter",
+      "subtitle": "Accédez au tableau de bord en direct de votre restaurant.",
+      "identifierLabel": "Email ou numéro de téléphone",
+      "identifierPlaceholder": "vous@exemple.com · ou · +254 712 345 678",
+      "identifierHint": "Les propriétaires se connectent avec leur email. Le personnel utilise le numéro que vous leur avez donné.",
+      "passwordLabel": "Mot de passe",
+      "submit": "Se connecter",
+      "noAccount": "Pas encore de compte ?",
+      "createAccount": "En créer un"
+    },
+    "signup": {
+      "kicker": "Servez plus intelligemment",
+      "title": "Créez votre restaurant",
+      "businessNameLabel": "Nom de l'entreprise",
+      "emailLabel": "Email",
+      "passwordLabel": "Mot de passe",
+      "submit": "Créer le compte",
+      "haveAccount": "Déjà inscrit ?",
+      "signIn": "Se connecter"
+    },
+    "confirm": {
+      "kicker": "Dernière étape",
+      "title": "Vérifiez votre email",
+      "sentTo": "Nous avons envoyé un lien à",
+      "body": "Cliquez sur le lien dans l'email pour vérifier votre adresse. Cette fenêtre peut rester ouverte — après vérification vous arriverez directement sur votre tableau de bord.",
+      "didntArrive": "Vous n'avez pas reçu l'email ?",
+      "signIn": "Essayez de vous connecter"
+    },
+    "errors": {
+      "identifierInvalid": "Entrez un email ou un numéro de téléphone valide.",
+      "phoneEmpty": "Entrez un numéro de téléphone.",
+      "phoneInvalidFormat": "Ce numéro ne semble pas valide. Essayez avec l'indicatif pays.",
+      "phoneInvalidNumber": "Ce numéro de téléphone n'est pas valide.",
+      "emailInvalid": "Entrez une adresse email valide.",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+      "restaurantTooShort": "Le nom du restaurant est trop court.",
+      "invalidCredentials": "Email/téléphone ou mot de passe incorrect.",
+      "phone_already_registered": "Ce numéro est déjà inscrit.",
+      "email_already_registered": "Cet email est déjà inscrit.",
+      "auth_create_failed": "Impossible de créer le compte. Réessayez.",
+      "auth_user_not_found": "Nous n'avons pas trouvé ce compte. Inscrivez-vous à nouveau.",
+      "already_onboarded": "Ce compte est déjà lié à un restaurant.",
+      "setup_failed": "Compte créé mais la configuration a échoué. Contactez le support.",
+      "unauthenticated": "Votre session a expiré. Veuillez vous reconnecter.",
+      "forbidden": "Vous n'avez pas la permission pour cela.",
+      "cannot_remove_self": "Vous ne pouvez pas vous supprimer vous-même.",
+      "cannot_remove_owner": "Le propriétaire ne peut pas être supprimé.",
+      "not_found": "Ce membre n'existe pas.",
+      "delete_failed": "Impossible de supprimer ce membre.",
+      "unknown": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "restaurants": "Restaurants",
+    "createRestaurant": "Créer un restaurant",
+    "form": {
+      "name": "Nom du restaurant",
+      "slug": "Slug URL",
+      "defaultLocale": "Langue par défaut",
+      "currency": "Devise",
+      "timezone": "Fuseau horaire",
+      "ownerEmail": "Email du propriétaire"
+    }
+  }
+}

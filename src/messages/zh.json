@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "brand": "cron.menu",
+    "title": "cron.menu — 扫码。下单。完成。",
+    "description": "餐厅为宾客服务的最快方式。扫描桌上的二维码,浏览菜单,下单,呼叫服务员。",
+    "keywords": "二维码菜单, 餐厅点单, 呼叫服务员, 无接触菜单, 餐桌点单, 餐厅软件, QR码, 数字菜单, 餐厅仪表板",
+    "ogAlt": "cron.menu — 餐厅二维码菜单:宾客一键下单并呼叫服务员。"
+  },
+  "common": {
+    "appName": "cron.menu",
+    "loading": "加载中...",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加",
+    "back": "返回",
+    "submit": "提交",
+    "language": "语言"
+  },
+  "landing": {
+    "hero": {
+      "title": "扫一扫,下单,搞定。",
+      "subtitle": "餐厅为顾客提供服务的最快方式。一扫 — 菜单即现他们的屏幕。一触 — 服务员即到他们的餐桌。",
+      "ctaPrimary": "免费开始",
+      "ctaSecondary": "了解如何使用"
+    },
+    "features": {
+      "title": "您的餐厅所需的一切",
+      "scan": { "title": "扫码查看菜单", "desc": "顾客扫描桌面二维码,立即看到菜单 — 无需应用。" },
+      "order": { "title": "从餐桌下单", "desc": "顾客将商品加入购物车。订单实时到达您的仪表板。" },
+      "callWaiter": { "title": "呼叫服务员", "desc": "一键通知相关员工。再也不用从远处挥手。" },
+      "global": { "title": "支持任何语言", "desc": "自动检测顾客语言。英语、法语、西班牙语、葡萄牙语、中文 — 更多语言即将上线。" }
+    }
+  },
+  "menu": {
+    "addToCart": "加入购物车",
+    "callWaiter": "呼叫服务员",
+    "viewCart": "查看购物车",
+    "unavailable": "无法提供",
+    "welcome": "欢迎来到 {restaurant}",
+    "table": "{number} 号桌",
+    "emptyMenu": "菜单即将上线 — 请联系服务员。",
+    "placeOrderError": "无法提交订单,请重试。",
+    "callWaiterError": "无法发送请求,请重试。"
+  },
+  "customer": {
+    "tableUnavailable": {
+      "title": "此餐桌当前不可用",
+      "body": "请向工作人员寻求帮助。"
+    }
+  },
+  "cart": {
+    "title": "您的购物车",
+    "empty": "您的购物车是空的",
+    "subtotal": "小计",
+    "placeOrder": "下单",
+    "orderPlaced": "订单已提交!",
+    "remove": "移除",
+    "viewCount": "{count, plural, =0 {查看购物车} other {查看购物车 · # 件}}"
+  },
+  "waiter": {
+    "title": "呼叫服务员",
+    "reasonPlaceholder": "您需要什么?(可选)",
+    "presets": { "bill": "结账", "water": "请给水", "help": "我需要帮助" },
+    "send": "发送请求",
+    "sent": "服务员正在过来"
+  },
+  "order": {
+    "status": { "pending": "订单已收到", "preparing": "正在准备", "served": "已送达" }
+  },
+  "dashboard": {
+    "title": "仪表板",
+    "subtitle": "来自餐厅的实时订单与请求。",
+    "nav": { "inbox": "收件箱", "menu": "菜单", "tables": "餐桌", "staff": "团队" },
+    "signOut": "退出登录",
+    "staff": {
+      "title": "您的团队",
+      "addTitle": "添加成员",
+      "nameLabel": "姓名",
+      "phoneLabel": "手机号码",
+      "passwordLabel": "密码",
+      "addSubmit": "添加",
+      "remove": "移除",
+      "confirmRemove": "移除该成员?将在所有设备上登出。",
+      "owner": "所有者",
+      "you": "您"
+    },
+    "live": { "label": "实时", "offline": "离线", "reconnecting": "正在重连" },
+    "stats": {
+      "activeOrders": "{count, plural, =0 {暂无订单} other {# 份订单}}",
+      "openRequests": "{count, plural, =0 {暂无请求} other {# 条请求}}",
+      "avgResponse": "平均响应 · {minutes}分钟",
+      "tablesActive": "{count, plural, =0 {餐厅空闲} other {# 桌就座}}"
+    },
+    "inbox": {
+      "orders": "订单",
+      "requests": "请求",
+      "empty": "一切就绪。暂无待办。",
+      "emptyHint": "新订单与呼叫将在此实时出现。",
+      "newOrder": "{table} 号桌新订单",
+      "newRequest": "{table} 号桌呼叫服务员",
+      "markPreparing": "开始准备",
+      "markServed": "已送达",
+      "resolve": "处理完成",
+      "minAgo": "{count} 分钟前",
+      "justNow": "刚刚",
+      "tableLabel": "{number} 号桌"
+    },
+    "install": {
+      "title": "安装 cron.menu",
+      "description": "客人下单或呼叫服务员时立即收到通知 — 即使应用已关闭。",
+      "install": "安装",
+      "dismiss": "稍后"
+    },
+    "sound": {
+      "mute": "静音提示",
+      "unmute": "开启声音提示"
+    },
+    "notifications": {
+      "title": "开启推送通知",
+      "description": "新订单或呼叫到达时立即提醒 — 即使手机锁屏。",
+      "enable": "开启",
+      "enabling": "开启中…",
+      "dismiss": "稍后",
+      "blockedTitle": "通知已被阻止",
+      "blockedDescription": "您已在此网站阻止通知。请在浏览器设置中允许,以接收提醒。"
+    },
+    "tables": {
+      "title": "餐桌",
+      "count": "{count, plural, =0 {暂无餐桌} other {# 张餐桌}}",
+      "add": "添加餐桌",
+      "addTitle": "添加餐桌",
+      "addSingle": "单张",
+      "addBulk": "批量",
+      "addSubmit": "创建",
+      "labelLabel": "标签",
+      "labelTag": "餐桌",
+      "bulkPrefix": "前缀(可选)",
+      "bulkFrom": "从",
+      "bulkTo": "到",
+      "bulkPreview": "将创建 {first} 至 {last}",
+      "rename": "重命名",
+      "delete": "删除",
+      "save": "保存",
+      "cancel": "取消",
+      "download": "下载",
+      "print": "打印",
+      "printAll": "全部打印",
+      "deleteTitle": "删除餐桌？",
+      "deleteBody": "将「{label}」从面板隐藏？订单历史将保留用于报表。",
+      "deleteConfirm": "删除",
+      "deleteCancel": "取消",
+      "deleted": "餐桌已删除",
+      "emptyTitle": "暂无餐桌",
+      "emptyBody": "添加第一张餐桌以生成可供客人扫描的二维码。",
+      "urlHint": "每个二维码以客人的语言打开 {name} 的菜单。重命名餐桌无需重新打印。",
+      "errors": {
+        "labelRequired": "请输入标签。",
+        "rangeInvalid": "起止都必须是数字。",
+        "duplicateLabels": "已被使用:{labels}",
+        "duplicate_label": "该标签已被使用。",
+        "bulkLimitExceeded": "一次最多添加 {limit} 张餐桌。",
+        "bulk_limit_exceeded": "超出批量上限。",
+        "deleteFailed": "无法删除餐桌。",
+        "invalid_body": "输入无效。",
+        "not_found": "找不到餐桌。",
+        "forbidden": "您没有权限。",
+        "unauthenticated": "会话已结束。",
+        "unknown": "发生错误。"
+      },
+      "printSheet": {
+        "empty": "无可打印内容。",
+        "scanLabel": "扫码下单",
+        "tableTag": "餐桌",
+        "poweredBy": "由 cron.menu 提供"
+      }
+    },
+    "menuMgmt": {
+      "title": "菜单",
+      "addCategory": "添加分类",
+      "addItem": "添加项目",
+      "itemName": "项目名称",
+      "itemDescription": "描述",
+      "itemPrice": "价格",
+      "available": "可提供"
+    }
+  },
+  "auth": {
+    "login": {
+      "kicker": "欢迎回来",
+      "title": "登录",
+      "subtitle": "访问您餐厅的实时仪表板。",
+      "identifierLabel": "邮箱或手机号",
+      "identifierPlaceholder": "you@example.com · 或 · +86 138 0000 0000",
+      "identifierHint": "所有者用邮箱登录。员工用您设定的手机号登录。",
+      "passwordLabel": "密码",
+      "submit": "登录",
+      "noAccount": "还没有账户?",
+      "createAccount": "立即创建"
+    },
+    "signup": {
+      "kicker": "更智能地服务",
+      "title": "创建您的餐厅",
+      "businessNameLabel": "商家名称",
+      "emailLabel": "邮箱",
+      "passwordLabel": "密码",
+      "submit": "创建账户",
+      "haveAccount": "已有账户?",
+      "signIn": "登录"
+    },
+    "confirm": {
+      "kicker": "最后一步",
+      "title": "查看您的邮箱",
+      "sentTo": "我们已将链接发送至",
+      "body": "点击邮件中的链接验证您的邮箱。可以保持此窗口打开 — 验证后您将直接进入仪表板。",
+      "didntArrive": "没收到邮件?",
+      "signIn": "尝试登录"
+    },
+    "errors": {
+      "identifierInvalid": "请输入有效的邮箱或手机号。",
+      "phoneEmpty": "请输入手机号码。",
+      "phoneInvalidFormat": "号码格式不正确,请加上国家代码。",
+      "phoneInvalidNumber": "该手机号码无效。",
+      "emailInvalid": "请输入有效的邮箱。",
+      "passwordTooShort": "密码至少 8 个字符。",
+      "restaurantTooShort": "餐厅名称太短。",
+      "invalidCredentials": "邮箱/手机号或密码错误。",
+      "phone_already_registered": "该号码已注册。",
+      "email_already_registered": "该邮箱已注册。",
+      "auth_create_failed": "无法创建账户,请重试。",
+      "auth_user_not_found": "未找到该账户,请重新注册。",
+      "already_onboarded": "该账户已关联到一家餐厅。",
+      "setup_failed": "账户已创建但配置失败,请联系支持。",
+      "unauthenticated": "会话已结束,请重新登录。",
+      "forbidden": "您没有权限执行此操作。",
+      "cannot_remove_self": "不能移除自己。",
+      "cannot_remove_owner": "不能移除所有者。",
+      "not_found": "该成员不存在。",
+      "delete_failed": "无法移除该成员。",
+      "unknown": "发生错误,请重试。"
+    }
+  },
+  "admin": {
+    "title": "管理员",
+    "restaurants": "餐厅",
+    "createRestaurant": "创建餐厅",
+    "form": {
+      "name": "餐厅名称",
+      "slug": "URL 标识",
+      "defaultLocale": "默认语言",
+      "currency": "货币",
+      "timezone": "时区",
+      "ownerEmail": "所有者邮箱"
+    }
+  }
+}
