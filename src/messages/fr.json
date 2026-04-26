@@ -2,9 +2,9 @@
   "metadata": {
     "brand": "cron.menu",
     "title": "cron.menu — Scannez. Commandez. Terminé.",
-    "description": "La façon la plus rapide pour les restaurants de servir leurs clients. Scannez le QR de votre table, parcourez le menu, commandez et appelez un serveur.",
-    "keywords": "menu QR, commande restaurant, appeler serveur, menu sans contact, commande à table, logiciel restaurant, code QR, menu numérique, tableau de bord restaurant",
-    "ogAlt": "cron.menu — le menu QR pour restaurants : les clients commandent et appellent un serveur en un tap."
+    "description": "La façon la plus rapide pour restaurants, cafés, bars et clubs de servir leurs clients. Scannez le QR de votre table, parcourez le menu, commandez et appelez un serveur.",
+    "keywords": "menu QR, commande restaurant, commande bar, menu QR club, menu café, appeler serveur, menu sans contact, commande à table, logiciel hôtellerie, code QR, menu numérique, tableau de bord établissement",
+    "ogAlt": "cron.menu — le menu QR pour restaurants, cafés, bars et clubs : les clients commandent et appellent un serveur en un tap."
   },
   "common": {
     "appName": "cron.menu",
@@ -21,12 +21,12 @@
   "landing": {
     "hero": {
       "title": "Scannez. Commandez. Terminé.",
-      "subtitle": "La façon la plus rapide pour les restaurants de servir leurs clients. Un scan — votre menu sur leur écran. Un tap — un serveur à leur table.",
+      "subtitle": "La façon la plus rapide pour restaurants, cafés, bars et clubs de servir leurs clients. Un scan — votre menu sur leur écran. Un tap — un serveur à leur table.",
       "ctaPrimary": "Commencer gratuitement",
       "ctaSecondary": "Voir comment ça marche"
     },
     "features": {
-      "title": "Tout ce dont votre restaurant a besoin",
+      "title": "Tout ce dont votre établissement a besoin",
       "scan": { "title": "Scannez pour voir le menu", "desc": "Les clients scannent un QR code et voient votre menu instantanément — sans application." },
       "order": { "title": "Commandez depuis la table", "desc": "Les clients ajoutent au panier. Les commandes arrivent en temps réel sur votre tableau de bord." },
       "callWaiter": { "title": "Appeler un serveur", "desc": "Un tap alerte le bon membre du personnel. Plus besoin de faire signe à travers la salle." },
@@ -71,7 +71,7 @@
   },
   "dashboard": {
     "title": "Tableau de bord",
-    "subtitle": "Commandes et demandes en direct de votre salle.",
+    "subtitle": "Commandes et demandes en direct de votre établissement.",
     "nav": { "inbox": "Boîte de réception", "menu": "Menu", "tables": "Tables", "staff": "Équipe" },
     "signOut": "Se déconnecter",
     "staff": {
@@ -198,8 +198,8 @@
     },
     "signup": {
       "kicker": "Servez plus intelligemment",
-      "title": "Créez votre restaurant",
-      "businessNameLabel": "Nom du restaurant",
+      "title": "Créez votre établissement",
+      "businessNameLabel": "Nom de l'établissement",
       "businessNamePlaceholder": "ex. Lagoon",
       "businessNameHint": "Ce que voient les clients en scannant le QR.",
       "emailLabel": "Email",
@@ -223,14 +223,14 @@
       "phoneInvalidNumber": "Ce numéro de téléphone n'est pas valide.",
       "emailInvalid": "Entrez une adresse email valide.",
       "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
-      "restaurantTooShort": "Le nom du restaurant est trop court.",
-      "restaurant_looks_like_email": "Utilisez le nom de votre restaurant, pas une adresse email.",
+      "restaurantTooShort": "Le nom de l'établissement est trop court.",
+      "restaurant_looks_like_email": "Utilisez le nom de votre établissement, pas une adresse email.",
       "invalidCredentials": "Email/téléphone ou mot de passe incorrect.",
       "phone_already_registered": "Ce numéro est déjà inscrit.",
       "email_already_registered": "Cet email est déjà inscrit.",
       "auth_create_failed": "Impossible de créer le compte. Réessayez.",
       "auth_user_not_found": "Nous n'avons pas trouvé ce compte. Inscrivez-vous à nouveau.",
-      "already_onboarded": "Ce compte est déjà lié à un restaurant.",
+      "already_onboarded": "Ce compte est déjà lié à un établissement.",
       "setup_failed": "Compte créé mais la configuration a échoué. Contactez le support.",
       "unauthenticated": "Votre session a expiré. Veuillez vous reconnecter.",
       "forbidden": "Vous n'avez pas la permission pour cela.",
@@ -243,10 +243,10 @@
   },
   "admin": {
     "title": "Admin",
-    "restaurants": "Restaurants",
-    "createRestaurant": "Créer un restaurant",
+    "restaurants": "Établissements",
+    "createRestaurant": "Créer un établissement",
     "form": {
-      "name": "Nom du restaurant",
+      "name": "Nom de l'établissement",
       "slug": "Slug URL",
       "defaultLocale": "Langue par défaut",
       "currency": "Devise",

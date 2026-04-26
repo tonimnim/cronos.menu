@@ -2,9 +2,9 @@
   "metadata": {
     "brand": "cron.menu",
     "title": "cron.menu — Scan. Order. Done.",
-    "description": "The fastest way for restaurants to serve guests. Scan the QR code on your table, browse the menu, order, and call a waiter.",
-    "keywords": "QR menu, restaurant ordering, call waiter, contactless menu, table ordering, restaurant software, QR code menu, digital menu, restaurant dashboard",
-    "ogAlt": "cron.menu — the restaurant QR menu for guests that orders and calls a waiter with one tap."
+    "description": "The fastest way for restaurants, cafés, bars, and clubs to serve guests. Scan the QR code on your table, browse the menu, order, and call a waiter.",
+    "keywords": "QR menu, restaurant ordering, club ordering, bar QR menu, café menu, call waiter, contactless menu, table ordering, hospitality software, QR code menu, digital menu, venue dashboard",
+    "ogAlt": "cron.menu — the QR menu for restaurants, cafés, bars, and clubs. Guests order and call a waiter with one tap."
   },
   "common": {
     "appName": "cron.menu",
@@ -21,12 +21,12 @@
   "landing": {
     "hero": {
       "title": "Scan. Order. Done.",
-      "subtitle": "The fastest way for restaurants to serve guests. One scan — your menu on their screen. One tap — a waiter at their table.",
+      "subtitle": "The fastest way for restaurants, cafés, bars & clubs to serve guests. One scan — your menu on their screen. One tap — a waiter at their table.",
       "ctaPrimary": "Get started free",
       "ctaSecondary": "See how it works"
     },
     "features": {
-      "title": "Everything your restaurant needs",
+      "title": "Everything your venue needs",
       "scan": { "title": "Scan to view menu", "desc": "Guests scan a table QR code and see your menu instantly — no app needed." },
       "order": { "title": "Order from the table", "desc": "Guests add items to cart. Orders arrive on your dashboard in real time." },
       "callWaiter": { "title": "Call a waiter", "desc": "One tap pings the right staff. No more waving from across the room." },
@@ -71,7 +71,7 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "subtitle": "Live orders and requests from your dining room.",
+    "subtitle": "Live orders and requests from your floor.",
     "nav": { "inbox": "Inbox", "menu": "Menu", "tables": "Tables", "staff": "Staff" },
     "signOut": "Sign out",
     "staff": {
@@ -198,8 +198,8 @@
     },
     "signup": {
       "kicker": "Start serving smarter",
-      "title": "Create your restaurant",
-      "businessNameLabel": "Restaurant name",
+      "title": "Create your venue",
+      "businessNameLabel": "Venue name",
       "businessNamePlaceholder": "e.g., Lagoon",
       "businessNameHint": "What guests see when they scan the QR.",
       "emailLabel": "Email",
@@ -223,14 +223,14 @@
       "phoneInvalidNumber": "That phone number isn't valid.",
       "emailInvalid": "Enter a valid email address.",
       "passwordTooShort": "Password must be at least 8 characters.",
-      "restaurantTooShort": "Restaurant name is too short.",
-      "restaurant_looks_like_email": "Use your restaurant's name, not an email address.",
+      "restaurantTooShort": "Venue name is too short.",
+      "restaurant_looks_like_email": "Use your venue's name, not an email address.",
       "invalidCredentials": "Wrong email/phone or password.",
       "phone_already_registered": "That phone number is already registered.",
       "email_already_registered": "That email is already registered.",
       "auth_create_failed": "We couldn't create the account. Try again.",
       "auth_user_not_found": "We couldn't find that account. Please sign up again.",
-      "already_onboarded": "This account is already linked to a restaurant.",
+      "already_onboarded": "This account is already linked to a venue.",
       "setup_failed": "Account created but setup failed. Contact support.",
       "unauthenticated": "Your session has ended. Please sign in again.",
       "forbidden": "You don't have permission to do that.",
@@ -243,10 +243,10 @@
   },
   "admin": {
     "title": "Admin",
-    "restaurants": "Restaurants",
-    "createRestaurant": "Create restaurant",
+    "restaurants": "Venues",
+    "createRestaurant": "Create venue",
     "form": {
-      "name": "Restaurant name",
+      "name": "Venue name",
       "slug": "URL slug",
       "defaultLocale": "Default language",
       "currency": "Currency",

@@ -2,9 +2,9 @@
   "metadata": {
     "brand": "cron.menu",
     "title": "cron.menu — Escaneie. Peça. Pronto.",
-    "description": "O jeito mais rápido para restaurantes atenderem seus clientes. Escaneie o QR da sua mesa, navegue pelo menu, faça o pedido e chame um garçom.",
-    "keywords": "menu QR, pedido em restaurante, chamar garçom, menu sem contato, pedido na mesa, software restaurante, código QR, menu digital, painel de restaurante",
-    "ogAlt": "cron.menu — o menu QR para restaurantes: os clientes pedem e chamam um garçom com um toque."
+    "description": "O jeito mais rápido para restaurantes, cafés, bares e clubes atenderem seus clientes. Escaneie o QR da sua mesa, navegue pelo menu, faça o pedido e chame um garçom.",
+    "keywords": "menu QR, pedido em restaurante, pedido em bar, menu QR clube, menu café, chamar garçom, menu sem contato, pedido na mesa, software hospitalidade, código QR, menu digital, painel do local",
+    "ogAlt": "cron.menu — o menu QR para restaurantes, cafés, bares e clubes: os clientes pedem e chamam um garçom com um toque."
   },
   "common": {
     "appName": "cron.menu",
@@ -21,12 +21,12 @@
   "landing": {
     "hero": {
       "title": "Escaneie. Peça. Pronto.",
-      "subtitle": "O jeito mais rápido para restaurantes atenderem seus clientes. Um scan — seu menu na tela deles. Um toque — um garçom na mesa deles.",
+      "subtitle": "O jeito mais rápido para restaurantes, cafés, bares e clubes atenderem seus clientes. Um scan — seu menu na tela deles. Um toque — um garçom na mesa deles.",
       "ctaPrimary": "Comece grátis",
       "ctaSecondary": "Ver como funciona"
     },
     "features": {
-      "title": "Tudo o que seu restaurante precisa",
+      "title": "Tudo o que seu local precisa",
       "scan": { "title": "Escaneie para ver o menu", "desc": "Os clientes escaneiam o QR code e veem seu menu na hora — sem app." },
       "order": { "title": "Peça da mesa", "desc": "Os clientes adicionam ao carrinho. Os pedidos chegam em tempo real no seu painel." },
       "callWaiter": { "title": "Chamar um garçom", "desc": "Um toque avisa o funcionário certo. Chega de acenar do outro lado do salão." },
@@ -71,7 +71,7 @@
   },
   "dashboard": {
     "title": "Painel",
-    "subtitle": "Pedidos e solicitações ao vivo do seu salão.",
+    "subtitle": "Pedidos e solicitações ao vivo do seu local.",
     "nav": { "inbox": "Caixa", "menu": "Menu", "tables": "Mesas", "staff": "Equipe" },
     "signOut": "Sair",
     "staff": {
@@ -198,8 +198,8 @@
     },
     "signup": {
       "kicker": "Atenda com inteligência",
-      "title": "Crie seu restaurante",
-      "businessNameLabel": "Nome do restaurante",
+      "title": "Crie seu local",
+      "businessNameLabel": "Nome do local",
       "businessNamePlaceholder": "ex. Lagoon",
       "businessNameHint": "O que os clientes veem ao escanear o QR.",
       "emailLabel": "E-mail",
@@ -223,14 +223,14 @@
       "phoneInvalidNumber": "Esse número de telefone não é válido.",
       "emailInvalid": "Digite um e-mail válido.",
       "passwordTooShort": "A senha deve ter pelo menos 8 caracteres.",
-      "restaurantTooShort": "O nome do restaurante é muito curto.",
-      "restaurant_looks_like_email": "Use o nome do seu restaurante, não um endereço de e-mail.",
+      "restaurantTooShort": "O nome do local é muito curto.",
+      "restaurant_looks_like_email": "Use o nome do seu local, não um endereço de e-mail.",
       "invalidCredentials": "E-mail/telefone ou senha incorretos.",
       "phone_already_registered": "Esse número já está cadastrado.",
       "email_already_registered": "Esse e-mail já está cadastrado.",
       "auth_create_failed": "Não conseguimos criar a conta. Tente novamente.",
       "auth_user_not_found": "Não encontramos essa conta. Cadastre-se novamente.",
-      "already_onboarded": "Esta conta já está vinculada a um restaurante.",
+      "already_onboarded": "Esta conta já está vinculada a um local.",
       "setup_failed": "Conta criada, mas a configuração falhou. Contate o suporte.",
       "unauthenticated": "Sua sessão terminou. Entre novamente.",
       "forbidden": "Você não tem permissão para isso.",
@@ -243,10 +243,10 @@
   },
   "admin": {
     "title": "Admin",
-    "restaurants": "Restaurantes",
-    "createRestaurant": "Criar restaurante",
+    "restaurants": "Locais",
+    "createRestaurant": "Criar local",
     "form": {
-      "name": "Nome do restaurante",
+      "name": "Nome do local",
       "slug": "Slug URL",
       "defaultLocale": "Idioma padrão",
       "currency": "Moeda",

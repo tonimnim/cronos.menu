@@ -2,9 +2,9 @@
   "metadata": {
     "brand": "cron.menu",
     "title": "cron.menu — Escanea. Pide. Listo.",
-    "description": "La forma más rápida para que los restaurantes atiendan a sus clientes. Escanea el QR de tu mesa, explora el menú, pide y llama al mesero.",
-    "keywords": "menú QR, pedido en restaurante, llamar mesero, menú sin contacto, pedido en mesa, software restaurante, código QR, menú digital, panel de restaurante",
-    "ogAlt": "cron.menu — el menú QR para restaurantes: los clientes piden y llaman al mesero con un toque."
+    "description": "La forma más rápida para que restaurantes, cafés, bares y clubes atiendan a sus clientes. Escanea el QR de tu mesa, explora el menú, pide y llama al mesero.",
+    "keywords": "menú QR, pedido en restaurante, pedido en bar, menú QR club, menú café, llamar mesero, menú sin contacto, pedido en mesa, software hostelería, código QR, menú digital, panel del local",
+    "ogAlt": "cron.menu — el menú QR para restaurantes, cafés, bares y clubes: los clientes piden y llaman al mesero con un toque."
   },
   "common": {
     "appName": "cron.menu",
@@ -21,12 +21,12 @@
   "landing": {
     "hero": {
       "title": "Escanea. Pide. Listo.",
-      "subtitle": "La forma más rápida para que los restaurantes atiendan a sus clientes. Un escaneo — tu menú en su pantalla. Un toque — un mesero en su mesa.",
+      "subtitle": "La forma más rápida para que restaurantes, cafés, bares y clubes atiendan a sus clientes. Un escaneo — tu menú en su pantalla. Un toque — un mesero en su mesa.",
       "ctaPrimary": "Empieza gratis",
       "ctaSecondary": "Ver cómo funciona"
     },
     "features": {
-      "title": "Todo lo que tu restaurante necesita",
+      "title": "Todo lo que tu local necesita",
       "scan": { "title": "Escanea para ver el menú", "desc": "Los clientes escanean el QR y ven tu menú al instante — sin aplicación." },
       "order": { "title": "Pide desde la mesa", "desc": "Los clientes añaden al carrito. Los pedidos llegan a tu panel en tiempo real." },
       "callWaiter": { "title": "Llamar al mesero", "desc": "Un toque avisa al personal correcto. Ya no hace falta hacer señas." },
@@ -71,7 +71,7 @@
   },
   "dashboard": {
     "title": "Panel",
-    "subtitle": "Pedidos y solicitudes en vivo desde tu comedor.",
+    "subtitle": "Pedidos y solicitudes en vivo desde tu local.",
     "nav": { "inbox": "Bandeja", "menu": "Menú", "tables": "Mesas", "staff": "Equipo" },
     "signOut": "Cerrar sesión",
     "staff": {
@@ -198,8 +198,8 @@
     },
     "signup": {
       "kicker": "Sirve con inteligencia",
-      "title": "Crea tu restaurante",
-      "businessNameLabel": "Nombre del restaurante",
+      "title": "Crea tu local",
+      "businessNameLabel": "Nombre del local",
       "businessNamePlaceholder": "p. ej., Lagoon",
       "businessNameHint": "Lo que ven los clientes al escanear el QR.",
       "emailLabel": "Correo electrónico",
@@ -223,14 +223,14 @@
       "phoneInvalidNumber": "Ese número de teléfono no es válido.",
       "emailInvalid": "Introduce un correo válido.",
       "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
-      "restaurantTooShort": "El nombre del restaurante es demasiado corto.",
-      "restaurant_looks_like_email": "Usa el nombre de tu restaurante, no un correo electrónico.",
+      "restaurantTooShort": "El nombre del local es demasiado corto.",
+      "restaurant_looks_like_email": "Usa el nombre de tu local, no un correo electrónico.",
       "invalidCredentials": "Correo/teléfono o contraseña incorrectos.",
       "phone_already_registered": "Ese número ya está registrado.",
       "email_already_registered": "Ese correo ya está registrado.",
       "auth_create_failed": "No pudimos crear la cuenta. Inténtalo de nuevo.",
       "auth_user_not_found": "No encontramos esa cuenta. Regístrate de nuevo.",
-      "already_onboarded": "Esta cuenta ya está asociada a un restaurante.",
+      "already_onboarded": "Esta cuenta ya está asociada a un local.",
       "setup_failed": "Cuenta creada pero la configuración falló. Contacta al soporte.",
       "unauthenticated": "Tu sesión ha terminado. Inicia sesión de nuevo.",
       "forbidden": "No tienes permiso para hacer eso.",
@@ -243,10 +243,10 @@
   },
   "admin": {
     "title": "Admin",
-    "restaurants": "Restaurantes",
-    "createRestaurant": "Crear restaurante",
+    "restaurants": "Locales",
+    "createRestaurant": "Crear local",
     "form": {
-      "name": "Nombre del restaurante",
+      "name": "Nombre del local",
       "slug": "Slug URL",
       "defaultLocale": "Idioma predeterminado",
       "currency": "Moneda",
