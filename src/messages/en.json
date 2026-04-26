@@ -200,7 +200,6 @@
       "kicker": "Start serving smarter",
       "title": "Create your venue",
       "businessNameLabel": "Venue name",
-      "businessNamePlaceholder": "e.g., Lagoon",
       "businessNameHint": "What guests see when they scan the QR.",
       "emailLabel": "Email",
       "passwordLabel": "Password",

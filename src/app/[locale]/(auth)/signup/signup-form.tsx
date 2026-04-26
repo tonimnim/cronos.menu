@@ -112,7 +112,6 @@ export function SignupForm() {
         <Input
           id="business"
           autoComplete="organization"
-          placeholder={t("businessNamePlaceholder")}
           value={businessName}
           onChange={(e) => setBusinessName(e.target.value)}
           required
@@ -131,7 +130,6 @@ export function SignupForm() {
           type="email"
           inputMode="email"
           autoComplete="email"
-          placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
